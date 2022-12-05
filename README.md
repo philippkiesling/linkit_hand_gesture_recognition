@@ -1,2 +1,2 @@
 # linkit_hand_gesture_recognition
-Linkit - Intermediate Challenge​ 
+Linkit WS22-23- Intermediate Challenge​ 
