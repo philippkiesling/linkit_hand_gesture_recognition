@@ -173,3 +173,27 @@ cython_debug/
 /yolov5/
 *.DS_Store
 *.pyc
+*.pyo
+*.pyd
+*.so
+*.dylib
+*.egg-info
+*.egg
+*.log
+*.csv
+*.json
+*.zip
+*.tar.gz
+*.tgz
+*.gz
+*.whl
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VSCode
+.vscode/
+.vscode/*
