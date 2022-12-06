@@ -167,5 +167,6 @@ cython_debug/
 
 .cache
 /datasets/cococopy/images
+/datasets/cococopy
 /datasets/cococopy/images/train/
 /wandb/
