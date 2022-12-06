@@ -44,14 +44,15 @@ If installed, training will automatically log to tensorboard.
 ## Submission
 1. Fill in the `predict` function in challenge.ipynb
 2. We will run the code with github actions using the following command: 
-`python FILLINHERE.py --possible-arguments FILLINHERE` 
+`python submission.py`
+*Note:* Feel free to borrow code from the yolov5 detect.py 
+
 3. The Output of the code should be a csv file with the following format:
 ADD_EXAMPLE CSV HERE
 4. You can check your current model performance and fps via the actions tab on github
    1. Open the actions tab
    2. Click on your latest action
    3. Open the `Run Challenge` step and scroll down to the `Test Results` section
-
 ## Evaluation
 We will evaluate your model on the following metrics:
 1. Mean Average Precision (mAP)
