@@ -7,6 +7,7 @@ Note: Your final script should run with the following command:
 """
 
 def inference():
+    print("Prediction script is running")
     pass
 
 if __name__ == '__main__':
