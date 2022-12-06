@@ -163,3 +163,9 @@ cython_debug/
 /.idea/modules.xml
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/vcs.xml
+/yolov5s.pt
+
+.cache
+/datasets/cococopy/images
+/datasets/cococopy/images/train/
+/wandb/
