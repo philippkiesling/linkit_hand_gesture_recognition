@@ -14,10 +14,11 @@ def evaluate(model):
     n_runs = 100
     print("Prediction script is running")
     img = cv2.imread('datasets/example/zidane.png')
-
     results = inference(model, img)
     print("mAP: {}".format(0.0000))
     start_time = datetime.now()
+
+    # To benchmark inference speed (FPS), we loop over the inference function n_runs times
     for i in range(0,n_runs):
         results = inference(model, img)
     end_time = datetime.now()

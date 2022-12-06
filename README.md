@@ -1,10 +1,9 @@
-# linkit_hand_gesture_recognition
+# LINKIT Intermediate Challenge (WS22-23) Real Time Hand Gesture Recognition 
 Linkit WS22-23- Intermediate Challenge 
 
 ## Setup
 1. Install Dependencies
 `pip install -r requirements.txt`
-
 _Note:_ Requires Python 3.6 or higher
 2. Open challenge.ipynb
 
@@ -51,14 +50,15 @@ If installed, training will automatically log to tensorboard.
 ### 
 
 ## Submission
-1. Fill in the `predict` function in challenge.ipynb
-2. We will run the code with github actions using the following command: 
+1. Fill in the `inference` function in challenge.ipynb
+   1. Inference expects a model 
+   2. *Note:* Feel free to borrow code from the yolov5 detect.py
+2. Update your requirements.txt file if you have installed any additional packages: `pip list --format=freeze > requirements.txt`
+3. We will run the code with github actions using the following command: 
 `python submission.py`
-*Note:* Feel free to borrow code from the yolov5 detect.py 
 
-3. The Output of the code should be a csv file with the following format:
-ADD_EXAMPLE CSV HERE
-4. You can check your current model performance and fps via the actions tab on github
+4. The Output of the code should be a pandas dataframe file in the same format as the exemplary `inference` functions output
+5. You can check your current model performance and fps via the actions tab on github
    1. Open the actions tab
    2. Click on your latest action
    3. Open the `Run Challenge` step and scroll down to the `Test Results` section
@@ -69,7 +69,8 @@ We will evaluate your model on the following metrics:
 2. FPS (Frames per second) must be greater than 5
 3. Model Size
 
-**BONUS:** Can convert and run your model in the [onnx format](https://onnx.ai/)?
+**BONUS:** Can you convert and run your model in the [onnx format](https://onnx.ai/)?
+This may increase inference speed and reduce model size.
 
 ## Contact
 If you have any questions, please contact us on linkit-Teams (or email us) at
