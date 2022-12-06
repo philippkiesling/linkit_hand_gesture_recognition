@@ -171,3 +171,5 @@ cython_debug/
 /datasets/cococopy/images/train/
 /wandb/
 /yolov5/
+*.DS_Store
+*.pyc
