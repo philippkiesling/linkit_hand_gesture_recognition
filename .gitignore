@@ -170,3 +170,4 @@ cython_debug/
 /datasets/cococopy
 /datasets/cococopy/images/train/
 /wandb/
+/yolov5/
