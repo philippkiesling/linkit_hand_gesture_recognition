@@ -5,9 +5,8 @@ Linkit WS22-23- Intermediate Challenge
 1. Install Dependencies
 
 `pip install -r requirements.txt`
-_Note:_ Requires Python 3.6-3.9
+_Note:_ Requires Python 3.6-3.10
 
-_Note:_ Python 3.10 may lead to errors in the labelling tool
 2. Open challenge.ipynb
 
 ## Repository Structure
