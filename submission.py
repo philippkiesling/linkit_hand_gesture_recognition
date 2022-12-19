@@ -9,13 +9,14 @@ import torch # PyTorch
 import cv2
 from datetime import datetime
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
-def evaluate(model):
+
+def evaluate(model, n_runs = 100):
     # Load image
-    n_runs = 100
+
     print("Prediction script is running")
     img = cv2.imread('datasets/example/zidane.png')
-    results = inference(model, img)
-    print("mAP: {}".format(0.0000))
+    #results = inference(model, img)
+    #print("mAP: {}".format(0.0000))
     start_time = datetime.now()
 
     # To benchmark inference speed (FPS), we loop over the inference function n_runs times
@@ -34,8 +35,8 @@ def inference(model, img):
 if __name__ == '__main__':
     # Read in your model here
     model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
+
     # Add an inference method (returns results)
 
     # Add your prediction script here
     evaluate(model)
-    pass

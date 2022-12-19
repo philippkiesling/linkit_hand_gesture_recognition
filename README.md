@@ -3,8 +3,11 @@ Linkit WS22-23- Intermediate Challenge
 
 ## Setup
 1. Install Dependencies
+
 `pip install -r requirements.txt`
-_Note:_ Requires Python 3.6 or higher
+_Note:_ Requires Python 3.6-3.9
+
+_Note:_ Python 3.10 may lead to errors in the labelling tool
 2. Open challenge.ipynb
 
 ## Repository Structure
@@ -58,7 +61,7 @@ If installed, training will automatically log to tensorboard.
 `python submission.py`
 
 4. The Output of the code should be a pandas dataframe file in the same format as the exemplary `inference` functions output
-5. You can check your current model performance and fps via the actions tab on github
+5. You can check your current fps via the actions tab on github
    1. Open the actions tab
    2. Click on your latest action
    3. Open the `Run Challenge` step and scroll down to the `Test Results` section
