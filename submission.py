@@ -41,7 +41,7 @@ evaluation_url = args.evaluation_url
 
 if __name__ == '__main__':
     # Read in your model here
-    print(f"evaluation_url: {evaluation_url}")
+    #print(f"evaluation_url: {evaluation_url}")
 
     model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
 
