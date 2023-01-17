@@ -32,6 +32,10 @@ jobs:
     - name: Print Secret Variable
       run: 
         echo $SECRET_URL
+        if ["$SECRET_URL" == "https://dummyjson.com/products"
+        then
+          echo "Got correct secret"
+        fi
         python python secret_submission_test.py --evaluation_url $SECRET_URL
       env:
         SECRET_URL: ${{secrets._SECRET_URL_TO_DATA}}
