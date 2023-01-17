@@ -13,45 +13,33 @@ permissions:
   contents: read
 
 jobs:
-  build:
-
+  evaluate_script:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
         python-version: "3.10"
+        
     - name: Install dependencies
       run: |
          python3 -m pip install requests
-    #    python -m pip install --upgrade pip
-    #    pip install flake8 pytest
-    #    if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Print Secret Variable
+         python3 -m pip install --upgrade pip
+         pip install flake8 pytest
+         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+         
+    - name: Lint with flake8
       run: |
-        # echo $SECRET_URL
-        if [ "$SECRET_URL" == "https://dummyjson.com/products" ]
-        then
-          echo "Got correct secret"
-        fi
-        
-        if [ "$SECRET_URL" != "https://dummyjson.com/products" ]
-        then
-          echo "Got incorrect secret"
-        fi
-        
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Run a submission script with a secret parameter
+      run: |        
         python secret_submission_test.py --evaluation_url $SECRET_URL
       env:
         SECRET_URL: ${{secrets._SECRET_URL_TO_DATA}}
-
-    #- name: Lint with flake8
-    #  run: |
-    #    # stop the build if there are Python syntax errors or undefined names
-    #    flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-    #    # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-    #    flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    #- name: Run submission script
-    #  run: |
-    #    python3 secret_submission_test.py
