@@ -31,8 +31,8 @@ jobs:
     #    if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Print Secret Variable
       run: 
-        echo $SECRET_URL
-        if ["$SECRET_URL" == "https://dummyjson.com/products"]
+        # echo $SECRET_URL
+        if [ "$SECRET_URL" == "https://dummyjson.com/products" ]
         then
           echo "Got correct secret"
         fi
