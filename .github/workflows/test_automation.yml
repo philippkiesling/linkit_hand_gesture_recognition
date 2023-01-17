@@ -27,7 +27,7 @@ jobs:
       run: 
         echo $SECRET_URL
       env:
-        SECRET_URL: ${{secret._SECRET_URL_TO_DATA}}
+        SECRET_URL: ${{secrets._SECRET_URL_TO_DATA}}
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
