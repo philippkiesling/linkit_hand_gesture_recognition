@@ -26,7 +26,7 @@ jobs:
     - name: Print Secret Variable
       run: 
         echo $SECRET_URL
-        python python secret_submission_test.py
+        python python secret_submission_test.py --evaluation_url $SECRET_URL
       env:
         SECRET_URL: ${{secrets._SECRET_URL_TO_DATA}}
     # - name: Install dependencies
