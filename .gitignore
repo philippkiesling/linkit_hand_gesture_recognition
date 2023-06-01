@@ -199,12 +199,9 @@ cython_debug/
 .vscode/*
 
 # do not upload your pictures to git
-datasets/gestures/images/test-dev/
-datasets/gestures/images/train/
-datasets/gestures/images/val/
-datasets/gestures/labels/test-dev/
-datasets/gestures/labels/train/
-datasets/gestures/labels/val/
-
-# do not upload the yolov5 folder
-yolov5/
+datasets/gestures/images/test-dev/*
+datasets/gestures/images/train/*
+datasets/gestures/images/val/*
+datasets/gestures/labels/test-dev/*
+datasets/gestures/labels/train/*
+datasets/gestures/labels/val/*
