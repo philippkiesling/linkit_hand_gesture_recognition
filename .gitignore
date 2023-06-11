@@ -197,3 +197,11 @@ cython_debug/
 # VSCode
 .vscode/
 .vscode/*
+
+# do not upload your pictures to git
+datasets/gestures/images/test-dev/*
+datasets/gestures/images/train/*
+datasets/gestures/images/val/*
+datasets/gestures/labels/test-dev/*
+datasets/gestures/labels/train/*
+datasets/gestures/labels/val/*
