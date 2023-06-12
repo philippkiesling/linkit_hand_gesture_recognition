@@ -76,5 +76,5 @@ This may increase inference speed and reduce model size.
 
 ## Contact
 If you have any questions, please contact us on linkit-Teams (or email us) at
-- Alex Rothmaier: alex.rothmaier@linkit.tech
 - Philipp Kiesling: philipp.kiesling@linkit.tech
+- Justus Thomsen: justus.thomsen@linkit.tech
